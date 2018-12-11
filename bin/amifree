@@ -7,7 +7,7 @@ const path = require('path');
 require('dotenv').config()
 
 const SCOPES = ['https://www.googleapis.com/auth/calendar.readonly'];
-const TOKEN_PATH = path.resolve(__dirname, '../token.json');
+const TOKEN_PATH = 'token.json';
 
 // Eventually take command line arguments to set today, tomorrow, thursday, etc.
 let today = new Date();
