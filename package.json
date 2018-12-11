@@ -1,0 +1,11 @@
+{
+  "name": "amifree",
+  "version": "1.0.0",
+  "description": "CLI utility to list free blocks of time from your Google Calendar",
+  "main": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matthew Volk",
+  "license": "ISC"
+}
