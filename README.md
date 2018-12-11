@@ -3,6 +3,23 @@
 ---
 A Node.js CLI utility to retrieve available time slots on your Google Calendar
 
+## Usage:
+Running this application for the first time:
+
+1. $ git clone https://github.com/matthewvolk/amifree.git folder-name/
+2. $ cd folder-name/
+3. Open a web browser and navigate to https://console.developers.google.com/
+4. Sign In with your Google Account
+5. Click "Select a Project" in the top left of the Dashboard to **create a new API Project**
+6. Name your project
+7. In your new project Dashboard, click "Library" and add Google Calendar API to your project
+8. Once enabled, navigate to your new project's credentials dashboard
+9. Click "Create Credentials" > "OAuth client ID"
+10. Fill out the necessary steps to generate your credentials
+11. Download your credentials JSON file
+12. $ mv /Your/download/path/credentials.json folder-name/
+13. $ ./bin/amifree
+
 ## Project Background/TODO:
 #### THE PROBLEM:
 A Node.js CLI utility to retrieve available time slots on your Google Calendar
@@ -25,19 +42,3 @@ The goal is to be more convenient than looking at your Calendar
 #### Issues/Security Concerns:
 * N/A
 
-## Usage:
-Running this application for the first time:
-
-1. $ git clone https://github.com/matthewvolk/amifree.git folder-name/
-2. $ cd folder-name/
-3. Open a web browser and navigate to https://console.developers.google.com/
-4. Sign In with your Google Account
-5. Click "Select a Project" in the top left of the Dashboard to **create a new API Project**
-6. Name your project
-7. In your new project Dashboard, click "Library" and add Google Calendar API to your project
-8. Once enabled, navigate to your new project's credentials dashboard
-9. Click "Create Credentials" > "OAuth client ID"
-10. Fill out the necessary steps to generate your credentials
-11. Download your credentials JSON file
-12. $ mv /Your/download/path/credentials.json folder-name/
-13. $ ./bin/amifree
