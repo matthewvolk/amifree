@@ -40,5 +40,5 @@ The goal is to be more convenient than looking at your Calendar
 * Refactor API to handle data manipulation from command line arguments
 
 #### Issues/Security Concerns:
-* N/A
+* Right now, all users are forced to create their own Google API credentials for this project. I want to look into a way to have everyone use my Google API credentials without giving them access to my file.
 
