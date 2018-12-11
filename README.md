@@ -1,6 +1,6 @@
 ![amifree](https://i.imgur.com/d5KjzJb.png "amifree")
 
-# amifree 📆
+---
 A Node.js CLI utility to retrieve available time slots on your Google Calendar
 
 ## Project Background/TODO:
