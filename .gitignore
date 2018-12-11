@@ -1,3 +1,9 @@
-credentials.json
+# Dependencies
+node_modules/
+
+# Dotenv file
 .env
+
+# Google authentication keys
+credentials.json
 token.json
