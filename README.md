@@ -18,7 +18,10 @@ Running this application for the first time:
 10. `$ git clone https://github.com/matthewvolk/amifree.git folder-name/`
 11. `$ cd folder-name/`
 12. `$ mv /Your/download/path/credentials.json folder-name/`
-13. `$ ./bin/amifree`
+13. `$ touch .env`
+14. `$ vim .env` and add your primary calendar email address as CALENDAR_ID="email@email.com"
+15. `$ npm install`
+16. `$ ./bin/amifree`
 
 ## Project Background/TODO:
 #### THE PROBLEM:
