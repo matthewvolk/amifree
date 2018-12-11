@@ -15,10 +15,10 @@ Running this application for the first time:
 7. Click "Create Credentials" > "OAuth client ID"
 8. Fill out the necessary steps to generate your credentials
 9. Download your credentials JSON file **as 'credentials.json'**
-10. $ git clone https://github.com/matthewvolk/amifree.git folder-name/
-11. $ cd folder-name/
-12. $ mv /Your/download/path/credentials.json folder-name/
-13. $ ./bin/amifree
+10. `$ git clone https://github.com/matthewvolk/amifree.git folder-name/`
+11. `$ cd folder-name/`
+12. `$ mv /Your/download/path/credentials.json folder-name/`
+13. `$ ./bin/amifree`
 
 ## Project Background/TODO:
 #### THE PROBLEM:
