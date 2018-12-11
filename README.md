@@ -1,5 +1,6 @@
+# amifree 📆
+A Node.js CLI utility to retrieve available time slots on your Google Calendar
 ![amifree](https://i.imgur.com/d5KjzJb.png "amifree")
-
 ## Project Background/TODO:
 #### THE PROBLEM:
 A Node.js CLI utility to retrieve available time slots on your Google Calendar
