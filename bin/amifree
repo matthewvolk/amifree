@@ -2,11 +2,12 @@
 const fs = require('fs');
 const readline = require('readline');
 const { google } = require('googleapis');
+const path = require('path');
 
 require('dotenv').config()
 
 const SCOPES = ['https://www.googleapis.com/auth/calendar.readonly'];
-const TOKEN_PATH = 'token.json';
+const TOKEN_PATH = path.resolve(__dirname, '../token.json');
 
 // Eventually take command line arguments to set today, tomorrow, thursday, etc.
 let today = new Date();
@@ -17,7 +18,7 @@ endOfToday.setHours(23,59,59,999);
 /**
  * Make the magic happen
  */
-fs.readFile('credentials.json', (err, content) => {
+fs.readFile(path.resolve(__dirname, '../credentials.json'), (err, content) => {
   if (err) return console.log("Error loading client secret file:", err);
   authorize(JSON.parse(content), listEvents);
 })
@@ -89,7 +90,7 @@ function listEvents(auth) {
         process.stdout.write(`\x1b[36;1m to\x1b[0m${start.slice(11)} PST\n`);
         // process.stdout.write("")
         process.stdout.write(`\x1b[36;1mfrom\x1b[0m${end.slice(11)} PST`);
-        if (i == timeSlots.length - 1) process.stdout.write(`\x1b[36;1m to\x1b[0m 5:00:00 PM PST\n\n`)
+        if (i == timeSlots.length - 1) process.stdout.write(`\x1b[36;1m to\x1b[0m 5:00:00 PM PST\n\n\n`)
       };
     } else {
       console.log('No upcoming events found.');
