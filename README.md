@@ -1,5 +1,3 @@
-# amifree 📆
-
 ![amifree](https://i.imgur.com/d5KjzJb.png "amifree")
 
 ## Project Background/TODO:
