@@ -80,7 +80,7 @@ function listEvents(auth) {
   }, (err, res) => {
     if (err) return console.log('The API returned an error: ' + err);
     if (res) {
-      let timeSlots = res.data.calendars['matt@commerceacceleration.com'].busy
+      let timeSlots = res.data.calendars[process.env.CALENDAR_ID].busy
 
       for (let i = 0; i < timeSlots.length; i++) {
         let start = new Date(timeSlots[i].start).toLocaleString('en-US', { hour12: true })
