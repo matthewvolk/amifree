@@ -9,7 +9,11 @@ require('dotenv').config()
 const SCOPES = ['https://www.googleapis.com/auth/calendar.readonly'];
 const TOKEN_PATH = 'token.json';
 
-// Eventually take command line arguments to set today, tomorrow, thursday, etc.
+/**
+ * TODO:
+ * Refactor these variables so that they can be set by command line
+ * arguments such as `amifree tomorrow` or `amifree 12/8/2019`
+ */
 let today = new Date();
 let endOfToday = new Date();
 endOfToday.setHours(71,59,59,999);
