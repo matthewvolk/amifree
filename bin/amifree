@@ -11,6 +11,7 @@ const TOKEN_PATH = 'token.json';
 
 /**
  * TODO:
+ * 
  * Refactor these variables so that they can be set by command line
  * arguments such as `amifree tomorrow` or `amifree 12/8/2019`
  */
