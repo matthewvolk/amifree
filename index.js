@@ -20,6 +20,13 @@ let today = new Date();
 let endOfToday = new Date();
 endOfToday.setHours(71,59,59,999);
 
+/**
+ * ==========================================
+ * BEGIN MAIN PROGRAM FUNCTION
+ * ==========================================
+ * 
+ * @param {array} argv Read arguments from process.argv
+ */
 function main(argv) {
 
   function checkEnvVars() {
@@ -27,6 +34,12 @@ function main(argv) {
       if (err) return console.log("\x1b[31;1m%s\x1b[0m", ".env file not found!");
       console.log('\n\x1b[92;1m\u2714 .env file found with CALENDAR_ID variable set\x1b[0m');
     })
+  }
+
+  function parseArgv(argv) {
+    if (!argv) return console.log("\x1b[31;1m%s\x1b[0m", "argv not found!");
+    console.log('\n\x1b[92;1m\u2714 arguments detected:\x1b[0m');
+    console.log(argv);
   }
 
   // Asyncronous, credentials.json file must resolve before authorize() is called
@@ -97,6 +110,8 @@ function main(argv) {
 
     checkEnvVars();
 
+    parseArgv(argv);
+
     const calendar = google.calendar({version: 'v3', auth});
     calendar.freebusy.query({
       auth: auth,
@@ -123,8 +138,6 @@ function main(argv) {
           process.stdout.write(`\x1b[36;1mfrom\x1b[0m${end.slice(11)} PST`);
           if (i == timeSlots.length - 1) process.stdout.write(`\x1b[36;1m to\x1b[0m 5:00:00 PM PST, ${start.substring(0, 10)}\n\n\n`)
         };
-
-        console.log(argv)
       } else {
         // Debug why this is not printing
         console.log('No upcoming events found.');
