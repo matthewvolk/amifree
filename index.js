@@ -65,6 +65,14 @@ function main(argv) {
     });
   }
 
+  /**
+   * This function fires the first time that the application is run to 
+   * check that the user has created an application in the API dev console
+   * and added their OAuth JSON Credentials to the project directory. 
+   * 
+   * @param {*} oAuth2Client 
+   * @param {*} callback 
+   */
   function getAccessToken(oAuth2Client, callback) {
     const authUrl = oAuth2Client.generateAuthUrl({
       access_type: 'offline',
