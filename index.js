@@ -2,6 +2,7 @@ const fs = require('fs');
 const readline = require('readline');
 const path = require('path');
 const { google } = require('googleapis');
+const { parseArgv, checkEnvVars } = require('./lib');
 require('dotenv').config();
 
 const SCOPES = ['https://www.googleapis.com/auth/calendar.readonly'];
@@ -26,19 +27,6 @@ endOfToday.setHours(71,59,59,999);
  * @param {array} argv Read arguments from process.argv
  */
 function main(argv) {
-
-  function checkEnvVars() {
-    fs.readFile(path.resolve(__dirname, '.env'), (err, success) => {
-      if (err) return console.log("\x1b[31;1m%s\x1b[0m", ".env file not found!");
-      console.log('\n\x1b[92;1m\u2714 .env file found with CALENDAR_ID variable set\x1b[0m');
-    })
-  }
-
-  function parseArgv(argv) {
-    if (!argv) return console.log("\x1b[31;1m%s\x1b[0m", "argv not found!");
-    console.log('\n\x1b[92;1m\u2714 arguments detected:\x1b[0m');
-    console.log(argv);
-  }
 
   // Asyncronous, credentials.json file must resolve before authorize() is called
   fs.readFile(path.resolve(__dirname, 'credentials.json'), (err, credentials) => {
