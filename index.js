@@ -1,9 +1,7 @@
 const fs = require('fs');
 const readline = require('readline');
 const path = require('path');
-
 const { google } = require('googleapis');
-
 require('dotenv').config();
 
 const SCOPES = ['https://www.googleapis.com/auth/calendar.readonly'];
