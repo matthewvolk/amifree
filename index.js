@@ -58,8 +58,8 @@ function main(argv) {
    * check that the user has created an application in the API dev console
    * and added their OAuth JSON Credentials to the project directory. 
    * 
-   * @param {*} oAuth2Client 
-   * @param {*} callback 
+   * @param {Object} oAuth2Client 
+   * @param {Function} callback 
    */
   function getAccessToken(oAuth2Client, callback) {
     const authUrl = oAuth2Client.generateAuthUrl({
