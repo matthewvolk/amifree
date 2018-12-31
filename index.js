@@ -103,7 +103,6 @@ function main(argv) {
   function amIFree(auth) {
 
     checkEnvVars();
-
     parseArgv(argv);
 
     const calendar = google.calendar({version: 'v3', auth});
