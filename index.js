@@ -125,6 +125,7 @@ function main(argv) {
           let start = new Date(timeSlots[i].start).toLocaleString('en-US', { hour12: true })
           let end = new Date(timeSlots[i].end).toLocaleString('en-US', { hour12: true })
 
+          // Refactor to not use hardcoded PST
           if (i == 0) process.stdout.write(`\n\x1b[36;1mI am free\nfrom\x1b[0m 7:30:00 AM PST`)
           process.stdout.write(`\x1b[36;1m to\x1b[0m${start.slice(11)} PST, ${start.substring(0, 10)}\n`);
           // process.stdout.write("")
