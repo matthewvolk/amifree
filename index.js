@@ -2,7 +2,9 @@ const fs = require('fs');
 const readline = require('readline');
 const path = require('path');
 const { google } = require('googleapis');
+
 const { parseArgv, checkEnvVars } = require('./lib');
+
 require('dotenv').config();
 
 const SCOPES = ['https://www.googleapis.com/auth/calendar.readonly'];
