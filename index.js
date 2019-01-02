@@ -129,9 +129,9 @@ function main(argv) {
 
           // Refactor to not use hardcoded PST
           if (i == 0) process.stdout.write(`\n\x1b[36;1mI am free\nfrom\x1b[0m 7:30:00 AM PST`)
-          process.stdout.write(`\x1b[36;1m to \x1b[0m${start.slice(11)} PST, ${start.substring(0, 10)}\n`);
+          process.stdout.write(`\x1b[36;1m to \x1b[0m${start.slice(10)} PST, ${start.substring(0, 10)}\n`);
           // process.stdout.write("")
-          process.stdout.write(`\x1b[36;1mfrom \x1b[0m${end.slice(11)} PST`);
+          process.stdout.write(`\x1b[36;1mfrom \x1b[0m${end.slice(10)} PST`);
           if (i == timeSlots.length - 1) process.stdout.write(`\x1b[36;1m to\x1b[0m 5:00:00 PM PST, ${start.substring(0, 10)}\n\n\n`)
         };
       } else {
