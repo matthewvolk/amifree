@@ -135,7 +135,7 @@ function main(argv) {
           if (i == timeSlots.length - 1) process.stdout.write(`\x1b[36;1m to\x1b[0m 5:00:00 PM PST, ${start.substring(0, 10)}\n\n\n`)
         };
       } else {
-        // Debug why this is not printing fix git cache issue 
+        // Debug why this is not printing 
         console.log('No upcoming events found.');
       }
     });
