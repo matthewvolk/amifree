@@ -3,29 +3,18 @@ const path = require('path');
 const readline = require('readline');
 
 const { google } = require('googleapis');
-
 const { parseArgv, checkEnvVars } = require('./utils');
 
 require('dotenv').config();
 
 const SCOPES = ['https://www.googleapis.com/auth/calendar.readonly'];
 const TOKEN_PATH = 'token.json';
+const TODAY = new Date();
+const END_OF_TODAY = new Date();
+      END_OF_TODAY.setHours(71,59,59,999);
 
 /**
- * TODO:
- * 
- * look into minimist library
- * provide interactivity by allowing users to enter args like 'amifree tomorrow'
- * 
- */
-const today = new Date();
-const endOfToday = new Date();
-endOfToday.setHours(71,59,59,999);
-
-/**
- * ==========================================
- * BEGIN MAIN PROGRAM FUNCTION
- * ==========================================
+ * Main Program Function. Called by ./bin/amifree
  * 
  * @param {array} argv Read arguments from process.argv
  */
@@ -33,7 +22,7 @@ function main(argv) {
 
   // Asyncronous, credentials.json file must resolve before authorize() is called
   fs.readFile(path.resolve(__dirname, 'credentials.json'), (err, credentials) => {
-    if (err) return console.log("Error loading client secret file: Please visit https://console.developers.google.com and create a new OAuth application", err);
+    if (err) return console.log("Error loading client secret file. Please visit https://console.developers.google.com and create a new OAuth application:", err);
 
     // Asyncronous, contains a call to fs.readFile() to parse the client token
     authorize(JSON.parse(credentials), amIFree);
@@ -116,8 +105,8 @@ function main(argv) {
         items: [
           { "id" : process.env.CALENDAR_ID }
         ],
-        timeMin: today,
-        timeMax: endOfToday
+        timeMin: TODAY,
+        timeMax: END_OF_TODAY
       }
     }, (err, res) => {
       if (err) return console.log('The API returned an error: ' + err);
