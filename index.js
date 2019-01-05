@@ -18,8 +18,8 @@ const TOKEN_PATH = 'token.json';
  * provide interactivity by allowing users to enter args like 'amifree tomorrow'
  * 
  */
-let today = new Date();
-let endOfToday = new Date();
+const today = new Date();
+const endOfToday = new Date();
 endOfToday.setHours(71,59,59,999);
 
 /**
