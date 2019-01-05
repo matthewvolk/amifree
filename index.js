@@ -33,7 +33,7 @@ function main(argv) {
 
   // Asyncronous, credentials.json file must resolve before authorize() is called
   fs.readFile(path.resolve(__dirname, 'credentials.json'), (err, credentials) => {
-    if (err) return console.log("Error loading client secret file:", err);
+    if (err) return console.log("Error loading client secret file: Please visit https://console.developers.google.com and create a new OAuth application", err);
 
     // Asyncronous, contains a call to fs.readFile() to parse the client token
     authorize(JSON.parse(credentials), amIFree);
