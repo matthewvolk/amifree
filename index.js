@@ -20,6 +20,18 @@ const END_OF_TODAY = new Date();
  */
 function main(argv) {
 
+  /**
+   * Check that the user has set process.env.CALENDAR_ID
+   * 
+   * This may not be necessary if user will enter calendar ID via CLI args parsed below
+   */
+  checkEnvVars();
+
+  /**
+   * Parse CLI args (argv) and use switch statement to call functions below based on CLI arg
+   */
+  parseArgv(argv);
+
   // Credentials.json file is read before authorize() is called
   fs.readFile(path.resolve(__dirname, 'credentials.json'), (err, credentials) => {
     if (err) return console.log("Error loading client secret file. Please visit https://console.developers.google.com and create a new OAuth application:", err);
@@ -94,10 +106,6 @@ function main(argv) {
   }
 
   function amIFree(auth) {
-
-    checkEnvVars();
-    parseArgv(argv);
-
     const calendar = google.calendar({version: 'v3', auth});
     calendar.freebusy.query({
       auth: auth,
