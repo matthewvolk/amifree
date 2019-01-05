@@ -15,13 +15,13 @@ Running this application for the first time:
 7. Click "Create Credentials" > "OAuth client ID"
 8. Fill out the necessary steps to generate your credentials
 9. Download your credentials JSON file **as 'credentials.json'**
-10. `$ git clone https://github.com/matthewvolk/amifree.git folder-name/`
-11. `$ cd folder-name/`
-12. `$ mv /Your/download/path/credentials.json folder-name/`
-13. `$ touch .env`
-14. `$ vim .env` and add your primary calendar email address as CALENDAR_ID="email@email.com"
-15. `$ npm install`
-16. `$ ./bin/amifree`
+10. <code>$ git clone https://github.com/matthewvolk/amifree.git folder-name/</code>
+11. <code>$ cd folder-name/</code>
+12. <code>$ mv /Your/download/path/credentials.json folder-name/</code>
+13. <code>$ touch .env</code>
+14. <code>$ vim .env</code> and add your primary calendar email address as CALENDAR_ID="email@email.com"
+15. <code>$ npm install</code>
+16. <code>$ ./bin/amifree</code>
 
 ## Project Background/TODO:
 #### THE PROBLEM:
@@ -34,7 +34,15 @@ I am in the process of creating an NPM package called amifree to remedy this pro
 When I am done building the application, I will create a write-up here.
 
 #### THE GOAL: 
-The goal is to be more convenient than looking at your Calendar
+The goal is to be more convenient than looking at your Calendar. The workflow will be as follows when the application is complete:
+1. User runs <code>npm install amifree</code>
+2. User runs <code>amifree</code>
+3. Application lists out steps to generate an appropriate Google OAuth application (also steps to download OAuth Credentials JSON file from Google Developer Console)
+5. User runs <code>amifree --register-oauth /Downloads/path/to/credentials.json
+6. Application reads JSON file and stores it in project directory
+7. User runs <code>amifree --calendarId googlecalendarid@gmail.com</code>
+8. Application stores calendarId in .env file
+9. User runs <code>amifree</code> and successfully configures application following CLI instructions!
 
 #### CURRENT PROGRESS:
 * Successfully authorize users
