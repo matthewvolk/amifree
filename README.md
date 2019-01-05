@@ -38,7 +38,7 @@ The goal is to be more convenient than looking at your Calendar. The workflow wi
 1. User runs <code>npm install amifree</code>
 2. User runs <code>amifree</code>
 3. Application lists out steps to generate an appropriate Google OAuth application (also steps to download OAuth Credentials JSON file from Google Developer Console)
-5. User runs <code>amifree --register-oauth /Downloads/path/to/credentials.json
+5. User runs <code>amifree --register-oauth /Downloads/path/to/credentials.json</code>
 6. Application reads JSON file and stores it in project directory
 7. User runs <code>amifree --calendarId googlecalendarid@gmail.com</code>
 8. Application stores calendarId in .env file
