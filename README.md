@@ -17,11 +17,12 @@ Running this application for the first time:
 9. Download your credentials JSON file **as 'credentials.json'**
 10. <code>$ git clone https://github.com/matthewvolk/amifree.git folder-name/</code>
 11. <code>$ cd folder-name/</code>
-12. <code>$ mv /Your/download/path/credentials.json folder-name/</code>
-13. <code>$ touch .env</code>
-14. <code>$ vim .env</code> and add your primary calendar email address as CALENDAR_ID="email@email.com"
-15. <code>$ npm install</code>
-16. <code>$ ./bin/amifree</code>
+12. <code>$ npm install</code>
+13. <code>$ mv /Your/download/path/credentials.json folder-name/</code>
+14. <code>$ touch .env</code>
+15. <code>$ vim .env</code> and add your primary calendar email address as CALENDAR_ID="email@email.com"
+16. <code>$ npm install</code>
+17. <code>$ ./bin/amifree</code>
 
 ## Project Background/TODO:
 #### THE PROBLEM:
@@ -43,9 +44,6 @@ The goal is to be more convenient than looking at your Calendar. The workflow wi
 7. User runs <code>amifree --calendarId googlecalendarid@gmail.com</code>
 8. Application stores calendarId in .env file
 9. User runs <code>amifree</code> and successfully configures application following CLI instructions!
-
-#### CURRENT PROGRESS:
-* Successfully authorize users
 
 #### TO DO:
 * Refactor API to handle data manipulation from command line arguments
