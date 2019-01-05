@@ -41,9 +41,9 @@ The goal is to be more convenient than looking at your Calendar. The workflow wi
 3. Application lists out steps to generate an appropriate Google OAuth application (also steps to download OAuth Credentials JSON file from Google Developer Console)
 5. User runs <code>amifree --register-oauth /Downloads/path/to/credentials.json</code>
 6. Application reads JSON file and stores it in project directory
-7. User runs <code>amifree --calendarId googlecalendarid@gmail.com</code>
-8. Application stores calendarId in .env file
-9. User runs <code>amifree</code> and successfully configures application following CLI instructions!
+7. User runs <code>amifree</code> and successfully configures application following CLI instructions
+8. User runs <code>amifree --calendarId googlecalendarid@gmail.com</code> entering a calendar ID associated with the account authorized in step 7 above
+9. Application stores calendarId in .env file
 
 #### TO DO:
 * Refactor API to handle data manipulation from command line arguments
