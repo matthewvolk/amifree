@@ -4,7 +4,7 @@ const readline = require('readline');
 
 const { google } = require('googleapis');
 
-const { parseArgv, checkEnvVars } = require('./lib');
+const { parseArgv, checkEnvVars } = require('./utils');
 
 require('dotenv').config();
 
