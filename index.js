@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 
 const { 
-  parseArgv, 
-  checkEnvVars, 
+  parseCLIArgs,
+  checkEnvironmentVariables,
   authorize, 
   amIFree 
 } = require('./utils');
@@ -19,12 +19,12 @@ module.exports = (argv) => {
    * 
    * This may not be necessary if user will enter calendar ID via CLI args parsed below
    */
-  checkEnvVars();
+  checkEnvironmentVariables();
 
   /**
-   * Parse CLI args (argv) and use switch statement to call functions below based on CLI arg
+   * TODO: use switch statement to call functions below based on CLI arg
    */
-  parseArgv(argv);
+  parseCLIArgs(argv);
 
   // Credentials.json file is read before authorize() is called
   fs.readFile(path.resolve(__dirname, 'credentials.json'), (err, credentials) => {
