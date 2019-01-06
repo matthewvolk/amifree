@@ -1,5 +1,5 @@
 <!-- ![amifree](https://i.imgur.com/d5KjzJb.png "amifree") -->
-![amifree](https://i.imgur.com/jz50uYK.gif "amifree")
+<img src="https://i.imgur.com/jz50uYK.gif" style="display: block; margin-left: auto; margin-right: auto; width: 40%;">
 
 ---
 A Node.js CLI utility to retrieve available time slots on your Google Calendar
