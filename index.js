@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-
 const { 
   parseCLIArgs,
   checkEnvironmentVariables,
@@ -26,7 +25,6 @@ module.exports = (argv) => {
    */
   parseCLIArgs(argv);
 
-  // Credentials.json file is read before authorize() is called
   fs.readFile(path.resolve(__dirname, 'credentials.json'), (err, credentials) => {
     if (err) return console.log("Error loading client secret file." + 
     "Please visit https://console.developers.google.com and create a new OAuth application:", err);
