@@ -27,7 +27,6 @@ module.exports = (argv) => {
    */
   // if (fs.existsSync(path.join(__dirname, "credentials.json"))) console.log('\x1b[92;1m\u2714 credentials.json\x1b[0m');
 
-
   if (argv.version || argv.v) {
     cmd = 'version'
   }
