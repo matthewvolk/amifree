@@ -1,3 +1,4 @@
+const { checkEnvironmentVariables } = require('./lib');
 require('dotenv').config();
 
 /**
