@@ -1,6 +1,14 @@
 require('dotenv').config();
 
 /**
+ * Copyright (C) 2019 Matthew Volk - All Rights Reserved
+ * You may use, distribute and modify this code under the
+ * terms of the ISC license.
+ *
+ * You should have received a copy of the ISC license with
+ * this program. If not, please write to: volkmattj@gmail.com, 
+ * or visit https://github.com/matthewvolk/amifree/blob/master/LICENSE.txt:
+ *
  * @param {array} argv Read arguments from process.argv
  */
 module.exports = (argv) => {
