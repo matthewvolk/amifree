@@ -1,10 +1,10 @@
 const help = `Usage: amifree [options]
 
 Options:
-  today                    The person name.
-  tomorrow                 The person birthday or born date.
-  version, -v, --version   Comming birthdays. Pass a date in the future.
-  help, -h, --help         Use a different birthday json file path.
+  today                    List Google Calendar availability for today.
+  tomorrow                 List Google Calendar availability for tomorrow.
+  version, -v, --version   Show package version.
+  help, -h, --help         Display this help menu.
 
 Examples:
   amifree today            # Displays available timeslots on your calendar for current day
