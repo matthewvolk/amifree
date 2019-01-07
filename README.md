@@ -4,6 +4,11 @@
 ---
 A Node.js CLI utility to retrieve available time slots on your Google Calendar
 
+## Prerequisites
+1. Node.js & NPM
+2. Knowledge of Google API's
+3. Ability to create an application in Google Developer Console, add an API, generate OAuth Credentials
+
 ## Usage:
 Running this application for the first time:
 

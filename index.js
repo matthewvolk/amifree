@@ -1,11 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 const { 
-  parseCLIArgs,
+  handleArgs,
   checkEnvironmentVariables,
   authorize, 
   amIFree 
-} = require('./utils');
+} = require('./lib');
 
 require('dotenv').config();
 
@@ -13,23 +13,36 @@ require('dotenv').config();
  * @param {array} argv Read arguments from process.argv
  */
 module.exports = (argv) => {
-  /**
-   * Check that the user has set process.env.CALENDAR_ID
-   * 
-   * This may not be necessary if user will enter calendar ID via CLI args parsed below
-   */
-  checkEnvironmentVariables();
+  argv = require('minimist')(argv.slice(2));
+  let cmd = argv._[0] || 'help'
 
-  /**
-   * TODO: use switch statement to call functions below based on CLI arg
-   */
-  parseCLIArgs(argv);
+  if (argv.version || argv.v) {
+    cmd = 'version'
+  }
 
-  fs.readFile(path.resolve(__dirname, 'credentials.json'), (err, credentials) => {
-    if (err) return console.log("Error loading client secret file." + 
-    "Please visit https://console.developers.google.com and create a new OAuth application:", err);
+  if (argv.help || argv.h) {
+    cmd = 'help'
+  }
 
-    // Asyncronous, contains a call to fs.readFile() to parse the client token
-    authorize(JSON.parse(credentials), amIFree);
-  });
+  switch (cmd) {
+    case 'today':
+      require('./cmds/today');
+      break;
+
+    case 'tomorrow':
+      require('./cmds/tomorrow');
+      break;
+
+    case 'version':
+      require('./cmds/version')();
+      break;
+
+    case 'help':
+      require('./cmds/help')();
+      break;
+
+    default:
+      return console.error(`"${cmd}" is not a valid command! Run 'amifree --help' for a list of available commands`);
+  }
+  return;
 }
