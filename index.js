@@ -15,7 +15,7 @@ require('dotenv').config({path: path.join(__dirname, ".env")});
  */
 module.exports = (argv) => {
   argv = require('minimist')(argv.slice(2));
-  let cmd = argv._[0] || 'help'
+  let cmd = argv._[0] || 'today'
 
   /**
    * TODO: If user has not yet set process.env.CALENDAR_ID, terminate the application.
