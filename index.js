@@ -20,12 +20,12 @@ module.exports = (argv) => {
   /**
    * TODO: If user has not yet set process.env.CALENDAR_ID, terminate the application.
    */
-  console.log('\n\x1b[92;1m\u2714 process.env.CALENDAR_ID:\x1b[0m', process.env.CALENDAR_ID);
+  // console.log('\n\x1b[92;1m\u2714 process.env.CALENDAR_ID\x1b[0m');
   
   /**
    * TODO: If user has not yet set credentials.json, terminate the application.  
    */
-  if (fs.existsSync(path.join(__dirname, "credentials.json"))) console.log('\x1b[92;1m\u2714 credentials.json\x1b[0m');
+  // if (fs.existsSync(path.join(__dirname, "credentials.json"))) console.log('\x1b[92;1m\u2714 credentials.json\x1b[0m');
 
 
   if (argv.version || argv.v) {
