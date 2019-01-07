@@ -1,12 +1,3 @@
-const fs = require('fs');
-const path = require('path');
-const { 
-  handleArgs,
-  checkEnvironmentVariables,
-  authorize, 
-  amIFree 
-} = require('./lib');
-
 require('dotenv').config();
 
 /**
