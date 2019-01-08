@@ -36,6 +36,11 @@ module.exports = (argv) => {
   }
 
   switch (cmd) {
+    // TODO: Create config for first time users of application
+    case 'config':
+      console.log('Begin configuration...');
+      break;
+
     case 'today':
       require('./cmds/today');
       break;
