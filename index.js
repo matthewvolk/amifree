@@ -36,11 +36,12 @@ module.exports = (argv) => {
   }
 
   switch (cmd) {
-    // TODO: Create config for first time users of application
+    // TODO: Create 'config' for first time users of application
     case 'config':
       console.log('Begin configuration...');
       break;
 
+    // TODO: Create 'info' for users to see configuration information
     case 'info':
       console.log("Possibly output information for the user to see" + 
       "e.g., Calendar ID Email, current date, etc.");
