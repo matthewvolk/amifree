@@ -29,26 +29,17 @@ Running this application for the first time:
 16. `$ npm install`
 17. `$ ./bin/amifree`
 
-## Project Background/TODO:
-#### THE PROBLEM:
-I needed a quicker solution to list out my Google Calendar availability than manually checking for open time slots. I tried services like Calend.ly but my clients were frustrated when I sent them a link to schedule time with me. I didn’t want to make them think I was too lazy to look at my own calendar.
-
-This application will eventually be published as an NPM package called `amifree` to remedy this problem.
-
-#### THE GOAL: 
+## THE GOAL: 
 The workflow will be as follows when the application is complete:
-1. User runs `npm install amifree`
-2. User runs `amifree`
-3. Application lists out steps to generate an appropriate Google OAuth application (also steps to download OAuth Credentials JSON file from Google Developer Console)
-5. User runs `amifree --register-oauth /Downloads/path/to/credentials.json`
-6. Application reads JSON file and stores it in project directory
-7. User runs `amifree` and successfully configures application following CLI instructions
-8. User runs `amifree --calendarId googlecalendarid@gmail.com` entering a calendar ID associated with the account authorized in step 7 above
-9. Application stores calendarId in .env file
+1. Run `npm install amifree`
+2. Run `amifree config`
+3. Application lists out steps to generate an appropriate Google OAuth application, read credentials.json file, and asks you for the Google Calendar ID of the calendar you want to read. 
+4. Run `amifree` for a list of available time slots from the Google Calendar associated with the Google Calendar ID above. 
 
-#### TO DO:
+## TO DO:
 * `amifree config`: Walks user through the process of creating Calendar API app in Google Developer console, generating and downloading credentials, passing credentials to CLI application for registration
 * `amifree --this week`: As well as other commands like this, I want the user to be able to query their calendar for a wider range of dates
+* `amifree --changeCalendarID newcalendarid@gmail.com`: Allows user to change the Google Calendar ID you want to read from. 
 
 #### Issues/Security Concerns:
 * Right now, all users are forced to create their own Google API credentials for this project. I want to look into a way to have everyone use my Google API credentials without giving them access to my file.
