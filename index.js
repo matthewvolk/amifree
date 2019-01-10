@@ -43,8 +43,8 @@ module.exports = (argv) => {
 
     // TODO: Create 'info' for users to see configuration information
     case 'info':
-      console.log("Possibly output information for the user to see" + 
-      "e.g., Calendar ID Email, current date, etc.");
+      require('./cmds/info')();
+      break;
 
     case 'today':
       require('./cmds/today');
