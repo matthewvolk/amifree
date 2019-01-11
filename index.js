@@ -63,8 +63,8 @@ module.exports = (argv) => {
       break;
 
     default:
-      return console.error(`\x1b[31;1m\u2718 "${cmd}" is not a valid command! 
-      \x1b[97;1mRun 'amifree --help' for a list of available commands\x1b[0m`);
+      require('./cmds/error')(cmd);
+      return;
   }
   return;
 }
