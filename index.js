@@ -8,8 +8,8 @@ require('dotenv').config({path: path.join(__dirname, ".env")});
  * terms of the ISC license.
  *
  * You should have received a copy of the ISC license with
- * this program. If not, please write to: volkmattj@gmail.com, 
- * or visit https://github.com/matthewvolk/amifree/blob/master/LICENSE.txt
+ * this program. If not, please refer to:  
+ * https://github.com/matthewvolk/amifree/blob/master/LICENSE.txt
  *
  * @param {array} argv Read arguments from process.argv
  */
