@@ -10,7 +10,7 @@ const config = `\x1b[1m
 module.exports = () => {
   console.log(config);
   process.stdout.write(`\x1b[1m1. Open a web browser and navigate to: \x1b[0m`)
-  console.log(`\x1b[34;4mhttps://console.developers.google.com/\x1b[0m`);
+  console.log(`\x1b[34;4m\nhttps://console.developers.google.com/\x1b[0m`);
   console.log('\x1b[1m2. From the project drop-down, choose Create a new project.\x1b[0m');
   console.log('\x1b[1m3. Enter a name for the project, click Create.\x1b[0m');
   console.log('\x1b[1m4. Click "Library" from the navigation menu on the left.\x1b[0m');
