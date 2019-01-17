@@ -29,14 +29,14 @@ Running this application for the first time:
 16. `$ npm install`
 17. `$ ./bin/amifree`
 
-## THE GOAL: 
+## The Goal: 
 The workflow will be as follows when the application is complete:
 1. Run `npm install amifree`
 2. Run `amifree config`
 3. Application lists out steps to generate an appropriate Google OAuth application, read credentials.json file, and asks you for the Google Calendar ID of the calendar you want to read. 
 4. Run `amifree` for a list of available time slots from the Google Calendar associated with the Google Calendar ID above. 
 
-## TO DO:
+## To Do:
 * `amifree config`: Walks user through the process of creating Calendar API app in Google Developer console, generating and downloading credentials, passing credentials to CLI application for registration
 * `amifree --this week`: As well as other commands like this, I want the user to be able to query their calendar for a wider range of dates
 * `amifree --changeCalendarID newcalendarid@gmail.com`: Allows user to change the Google Calendar ID you want to read from. 
