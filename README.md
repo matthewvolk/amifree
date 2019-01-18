@@ -30,7 +30,7 @@ Running this application for the first time:
 17. `$ ./bin/amifree`
 
 ## The Goal: 
-The workflow will be as follows when the application is complete:
+When the application is complete, the user will be able to:
 1. Run `npm install amifree`
 2. Run `amifree config`
 3. Application lists out steps to generate an appropriate Google OAuth application, read credentials.json file, and asks you for the Google Calendar ID of the calendar you want to read. 
