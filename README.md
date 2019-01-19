@@ -2,7 +2,7 @@
 ![amifree-gif](https://i.imgur.com/FS7QYIk.gif)
 
 ---
-A Node.js CLI utility to retrieve available time slots on your Google Calendar
+A Node.js CLI utility to retrieve available time slots on your Google Calendar.
 
 ## Prerequisites
 1. Node.js & NPM
