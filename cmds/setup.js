@@ -27,6 +27,7 @@ const getCredentialsJson = () => {
   readline.question("\nDrag the downloaded credentials JSON file into this terminal to get the path and then press ENTER:\n", (path) => {
     console.log(`Importing Credentials.json from: ${path}`);
     readline.close();
+    // TODO: Validate Credentials.json
   });
 }
 
