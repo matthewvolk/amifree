@@ -37,7 +37,7 @@ When the application is complete, the user will be able to:
 4. Run `amifree` for a list of available time slots from the Google Calendar associated with the Google Calendar ID above. 
 
 ## To Do:
-* `amifree config`: Walks user through the process of creating Calendar API app in Google Developer console, generating and downloading credentials, passing credentials to CLI application for registration
+* If `credentials.json` file already exists and user runs `amifree setup`, ask "Would you like to overwrite your current credentials file?"
 * `amifree --this week`: As well as other commands like this, I want the user to be able to query their calendar for a wider range of dates
 * `amifree --changeCalendarID newcalendarid@gmail.com`: Allows user to change the Google Calendar ID you want to read from. 
 
