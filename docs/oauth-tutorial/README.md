@@ -1,7 +1,7 @@
 # Creating a credentials.json file for Google's Calendar API
 This tutorial will walk you through the steps required to generate a credentials.json file to use with the amifree application (https://github.com/matthewvolk/amifree)
 
-### Instrutions:
+### Instructions:
 1. Navigate to https://console.developers.google.com
 2. Sign in
 3. Click the "Select a Project" dropdown menu:
