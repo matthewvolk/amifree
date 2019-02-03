@@ -46,7 +46,7 @@ This tutorial will walk you through the steps required to generate a credentials
 
 13. **Fill out the desired information for the OAuth consent screen. Note, you are the only person who will theoretically see this screen.**
 
-![Fill out the consent screen information](https://i.imgur.com/YAbOJ0G.png)
+![Fill out the consent screen information](https://i.imgur.com/l7MPGZc.png)
 
 14. **Congrats! Download your newly generated credentials json file, and paste the absolute path to that file into the `amifree setup` prompt in your terminal window**
 
