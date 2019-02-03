@@ -20,12 +20,18 @@ module.exports = (argv) => {
   /**
    * TODO: If user has not yet set process.env.CALENDAR_ID, terminate the application.
    */
-  // if (!process.env.CALENDAR_ID) require('./lib/getCalendarId')();
+  if (!process.env.CALENDAR_ID) {
+    console.log("\x1b[31;1m%s\x1b[0m", "\u2718 .env file not found! Please run 'amifree setup' to fix this error.");
+    return;
+  }
   
   /**
    * TODO: If user has not yet set credentials.json, terminate the application.  
    */
-  // if (fs.existsSync(path.join(__dirname, "credentials.json"))) console.log('\x1b[92;1m\u2714 credentials.json\x1b[0m');
+  if (fs.existsSync(path.join(__dirname, "credentials.json"))) {
+    console.log("\x1b[31;1m%s\x1b[0m", "\u2718 credentials.json file not found! Please run 'amifree setup' to fix this error.");
+    return;
+  }
 
   if (argv.version || argv.v) {
     cmd = 'version'
