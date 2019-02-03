@@ -25,17 +25,13 @@ module.exports = (argv) => {
     cmd = 'help'
   }
 
-  /**
-   * TODO: If user has not yet set process.env.CALENDAR_ID, terminate the application.
-   */
+  // If user has not yet set process.env.CALENDAR_ID, terminate the application.
   if (!process.env.CALENDAR_ID && (cmd !== 'setup' && cmd !== 'help' && cmd !== 'version')) {
     console.log("\x1b[31;1m%s\x1b[0m", "\u2718 .env file not found! Please run 'amifree setup' to fix this error. Line 32");
     return;
   }
   
-  /**
-   * TODO: If user has not yet set credentials.json, terminate the application.  
-   */
+  // If user has not yet set credentials.json, terminate the application.  
   if (!fs.existsSync(path.join(__dirname, "credentials.json")) && (cmd !== 'setup' && cmd !== 'help' && cmd !== 'version')) {
     console.log("\x1b[31;1m%s\x1b[0m", "\u2718 credentials.json file not found! Please run 'amifree setup' to fix this error.");
     return;
