@@ -16,7 +16,7 @@ const instructions = `\x1b[1m
 Welcome! This application uses Google OAuth2 to read your Google Calendar events.
 For a tutorial explaining exactly how to download your Google OAuth2 Credentials
 for use specifically with this application, please visit:
-{{ TODO: CREATE TUTORIAL AND LINK IT AS A README FROM GITHUB }}`
+https://github.com/matthewvolk/amifree/tree/master/docs/oauth-tutorial`
 
 const getCredentialsJson = () => {
   readline.question("\nDrag the downloaded credentials JSON file into this terminal to get the path and then press ENTER:\n", (path) => {
