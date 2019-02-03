@@ -36,8 +36,8 @@ module.exports = (argv) => {
   }
 
   switch (cmd) {
-    case 'config':
-      require('./cmds/config')();
+    case 'setup':
+      require('./cmds/setup')();
       break;
 
     case 'info':
