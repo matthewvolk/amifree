@@ -62,7 +62,7 @@ const validateCredentialsJson = (path) => {
       }
       if (!err) {
         console.log('\x1b[92;1m\u2714 credentials.json file created!\x1b[0m');
-        require('../cmds/today');
+        require('../lib/getCalendarId')();
       }
     });
   });
