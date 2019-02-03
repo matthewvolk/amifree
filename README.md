@@ -11,23 +11,11 @@ A Node.js CLI utility to retrieve available time slots on your Google Calendar.
 ## Usage:
 Running this application for the first time:
 
-1. Open a web browser and navigate to https://console.developers.google.com/
-2. Sign In with your Google Account
-3. In your Google Developer Console, find the option to **create a new API Project**
-4. Name your project
-5. In your new project Dashboard, click "Library" and **add 'Google Calendar API'** to your project
-6. Once enabled, navigate to your new project's credentials dashboard
-7. Click "Create Credentials" > "OAuth client ID"
-8. Fill out the necessary steps to generate your credentials
-9. Download your credentials JSON file **as 'credentials.json'**
+1. Follow this tutorial to generate a Google Calendar API: https://github.com/matthewvolk/amifree/tree/master/docs/oauth-tutorial
 10. `$ git clone https://github.com/matthewvolk/amifree.git folder-name/`
 11. `$ cd folder-name/`
 12. `$ npm install`
-13. `$ mv /Your/download/path/credentials.json folder-name/`
-14. `$ touch .env`
-15. `$ vim .env` and add your primary calendar email address as CALENDAR_ID="email@email.com"
-16. `$ npm install`
-17. `$ ./bin/amifree`
+13. `$ ./bin/amifree setup`
 
 ## The Goal: 
 When the application is complete, the user will be able to:
