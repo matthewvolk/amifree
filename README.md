@@ -30,4 +30,4 @@ When the application is complete, the user will be able to:
 * `amifree --changeCalendarID newcalendarid@gmail.com`: Allows user to change the Google Calendar ID you want to read from. 
 
 #### Issues/Security Concerns:
-* Right now, all users are forced to create their own Google API credentials for this project. I want to look into a way to have everyone use my Google API credentials without giving them access to my file.
+* Right now, all users are forced to create their own Google API credentials for this project. I'm not sure there's any better way to do this given the way that OAuth 2.0 is written, but any and all PR's are welcome. 
