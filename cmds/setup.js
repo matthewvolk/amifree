@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 const readline = require('readline').createInterface({
   input: process.stdin,
   output: process.stdout
@@ -55,7 +56,7 @@ const validateCredentialsJson = (path) => {
 
     // If JSON is valid, create credentials.json in root directory
     json = JSON.stringify(obj);
-    fs.writeFile('./credentials.json', json, (err) => {
+    fs.writeFile(path.resolve(__dirname, '../credentials.json'), json, (err) => {
       if (err) {
         console.log('\x1b[31;1m\u2718 ERROR: credentials JSON file could not be written.\x1b[0m')
       }
