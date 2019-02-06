@@ -19,16 +19,16 @@ For a tutorial explaining exactly how to download your Google OAuth2 credentials
 \x1b[1;36mhttps://github.com/matthewvolk/amifree/tree/master/docs/oauth-tutorial\x1b[0m`
 
 const getCredentialsJson = () => {
-  readline.question("\nDrag the downloaded credentials JSON file into this terminal to get the path and then press ENTER:\n", (path) => {
-    console.log(`Importing Credentials.json from: ${path}`);
+  readline.question("\nDrag the downloaded credentials JSON file into this terminal to get the path and then press ENTER:\n", (downloadPath) => {
+    console.log(`Importing Credentials.json from: ${downloadPath}`);
     readline.close();
-    validateCredentialsJson(path.trim());
+    validateCredentialsJson(downloadPath.trim());
   });
 }
 
-const validateCredentialsJson = (path) => {
+const validateCredentialsJson = (downloadPath) => {
   var obj;
-  fs.readFile(path, 'utf8', function (err, data) {
+  fs.readFile(downloadPath, 'utf8', function (err, data) {
     if (err) {
       console.log('\x1b[31;1m\u2718 ERROR: Path does not lead to a valid JSON file:\x1b[0m', err.path);
       return;
