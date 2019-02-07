@@ -25,9 +25,11 @@ When the application is complete, the user will be able to:
 4. Run `amifree` for a list of available time slots from the Google Calendar associated with the Google Calendar ID above. 
 
 ## To Do:
+* Refactor to use Moment.jss
 * If `credentials.json` file already exists and user runs `amifree setup`, ask "Would you like to overwrite your current credentials file?"
 * `amifree --this week`: As well as other commands like this, I want the user to be able to query their calendar for a wider range of dates
 * `amifree --changeCalendarID newcalendarid@gmail.com`: Allows user to change the Google Calendar ID you want to read from. 
 
 #### Issues/Security Concerns:
 * Right now, all users are forced to create their own Google API credentials for this project. I'm not sure there's any better way to do this given the way that OAuth 2.0 is written, but any and all PR's are welcome. 
+* I thought I could make a solution without Moment.js, but turns out Moment.js just has too many useful utils that I could incorporate.
