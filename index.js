@@ -26,7 +26,7 @@ module.exports = (argv) => {
   }
 
   // If user has not yet set process.env.CALENDAR_ID, terminate the application.
-  if (!process.env.CALENDAR_ID && (cmd !== 'setup' && cmd !== 'help' && cmd !== 'version')) {
+  if (!process.env.CALENDAR_ID && (cmd !== 'setup' && cmd !== 'help' && cmd !== 'version' && cmd !== 'info')) {
     console.log("\x1b[31;1m%s\x1b[0m", "\u2718 .env file not found! Please run 'amifree setup' to fix this error. Line 32");
     return;
   }
