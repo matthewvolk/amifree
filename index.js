@@ -32,7 +32,7 @@ module.exports = (argv) => {
   }
   
   // If user has not yet set credentials.json, terminate the application.  
-  if (!fs.existsSync(path.join(__dirname, "credentials.json")) && (cmd !== 'setup' && cmd !== 'help' && cmd !== 'version')) {
+  if (!fs.existsSync(path.join(__dirname, "credentials.json")) && (cmd !== 'setup' && cmd !== 'help' && cmd !== 'version' && cmd !== 'info')) {
     console.log("\x1b[31;1m%s\x1b[0m", "\u2718 Your application credentials have not yet been configured! Please run 'amifree setup' to fix this error.");
     return;
   }

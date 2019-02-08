@@ -1,7 +1,7 @@
 const { freeBusy } = require('../lib');
 
 const START_OF_TODAY = new Date();
-      START_OF_TODAY.setHours(0,0,0,0);
+      START_OF_TODAY.setHours(7,30,0,0);
 const END_OF_TODAY = new Date();
       END_OF_TODAY.setHours(23,59,59,999);
 
