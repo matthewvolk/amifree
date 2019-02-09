@@ -38,7 +38,7 @@ const validateCredentialsJson = (downloadPath) => {
 
     /**
      * TODO:
-     * Better file validation
+     * Better file validation 
      */
     if (
       !obj.installed || 
