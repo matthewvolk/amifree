@@ -10,8 +10,8 @@ Options:
   \x1b[36;1mhelp, -h, --help\x1b[0m         Display this help menu.
 
 Examples:
-  \x1b[36;1mamifree today\x1b[0m            # Displays available timeslots on your calendar for current day
-  \x1b[36;1mamifree tomorrow\x1b[0m         # Displays availabel timelines on your calendar for tomorrow 
+  \x1b[36;1mamifree today\x1b[0m            Displays available timeslots on your calendar for current day
+  \x1b[36;1mamifree tomorrow\x1b[0m         Displays availabel timelines on your calendar for tomorrow 
 
 Documentation can be found at \x1b[36;1mhttps://github.com/matthewvolk/amifree\x1b[0m 
 `
