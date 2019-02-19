@@ -25,13 +25,19 @@ module.exports = (argv) => {
     cmd = 'help'
   }
 
-  // If user has not yet set process.env.CALENDAR_ID, terminate the application.
+  /**
+   * TODO: 
+   * Refactor to use error exit codes instead of console.log
+   */
   if (!process.env.CALENDAR_ID && (cmd !== 'setup' && cmd !== 'help' && cmd !== 'version' && cmd !== 'info')) {
     console.log("\x1b[31;1m%s\x1b[0m", "\u2718 Your Calendar ID has not yet been configured! Please run 'amifree setup' to fix this error. Line 32");
     return;
   }
   
-  // If user has not yet set credentials.json, terminate the application.  
+  /**
+   * TODO:
+   * Refactor to use error exit codes instead of console.log
+   */
   if (!fs.existsSync(path.join(__dirname, "credentials.json")) && (cmd !== 'setup' && cmd !== 'help' && cmd !== 'version' && cmd !== 'info')) {
     console.log("\x1b[31;1m%s\x1b[0m", "\u2718 Your application credentials have not yet been configured! Please run 'amifree setup' to fix this error.");
     return;
