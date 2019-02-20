@@ -28,6 +28,7 @@ module.exports = (argv) => {
   /**
    * TODO: 
    * Refactor to use error exit codes instead of console.log
+   * Refactor to iterate through the list of minimist commands instead of this error checking conditional
    */
   if (!process.env.CALENDAR_ID && (cmd !== 'setup' && cmd !== 'help' && cmd !== 'version' && cmd !== 'info')) {
     console.log("\x1b[31;1m%s\x1b[0m", "\u2718 Your Calendar ID has not yet been configured! Please run 'amifree setup' to fix this error. Line 32");
@@ -37,6 +38,7 @@ module.exports = (argv) => {
   /**
    * TODO:
    * Refactor to use error exit codes instead of console.log
+   * Refactor to iterate through the list of minimist commands instead of this error checking conditional
    */
   if (!fs.existsSync(path.join(__dirname, "credentials.json")) && (cmd !== 'setup' && cmd !== 'help' && cmd !== 'version' && cmd !== 'info')) {
     console.log("\x1b[31;1m%s\x1b[0m", "\u2718 Your application credentials have not yet been configured! Please run 'amifree setup' to fix this error.");
